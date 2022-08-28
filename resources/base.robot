@@ -3,7 +3,8 @@ Documentation       Tudo deve começar por aqui
 
 Library         SikuliLibrary
 
-Resource        actions/masteretaildesktop.robot
+Resource        actions/masterRetailDesktopLogin.robot
+                
 
 * Keywords *
 Carrega os Elementos do App
