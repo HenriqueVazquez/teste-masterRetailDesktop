@@ -1,22 +1,23 @@
-* Settings *
+*** Settings ***
 Documentation       Tudo deve começar por aqui
 
-Library         SikuliLibrary
+Library             SikuliLibrary
+Resource            actions/masterRetailDesktopLogin.robot
+Resource            actions/masterRetailDesktopPesquisaCodBarras.robot
 
-Resource        actions/masterRetailDesktopLogin.robot
-                
 
-* Keywords *
+*** Keywords ***
 Carrega os Elementos do App
-    Add Image Path      ${EXECDIR}\\resources\\elements
+    Add Image Path    ${EXECDIR}\\resources\\elements
 
 Inicia Sessão
     Carrega os Elementos do App
-    Click           icone-app.png
+    Click    icone-app.png
 
 Encerrar Sessão
     Stop Remote Server
 
 Finaliza Teste
     Capture Screen
-    Close Application       MasterRetailDesktop
+    Close Application    MasterRetailDesktop
+
